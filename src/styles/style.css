@@ -175,7 +175,7 @@ tr:last-of-type
 
 #editItem
 {
-    background-image: url(/src/icons/edit.png);
+    background-image: url(src/icons/edit.png);
 
 }
 
@@ -186,7 +186,7 @@ tr:last-of-type
 
 #deleteItem
 {
-    background-image: url(/src/icons/delete.png);
+    background-image: url(src/icons/delete.png);
 
 }
 
