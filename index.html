@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-pb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas compras</title>
+    <link rel="shortcut icon" href="/src/icons/shopping-cart.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/responsive.css">
+</head>
+
+<body>
+    <!-- MAIN - FORM -->
+    <main class="">
+        <h1>Carrinho de compras</h1>
+        <form action="" id="formProducts">        
+            <input type="text" id="name" placeholder="PRODUTO" required >
+            <input type="number" id="price" placeholder="PREÇO" required min="1" step="0.01">
+            <input type="number" id="quantity" placeholder="QUANTIDADE" required min="1">
+            
+            <button type="submit" id="insert" onclick="addProduct()">Adicionar</button>
+        </form>        
+    </main>
+
+    <!-- ASIDE DA TABELA -->
+    <aside>
+        <h2>Lista de compras</h2>
+        <table id="tableProducts">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Qtd.</th>
+                    <th>Total</th>
+                    <th >Ações</th>
+                </tr>
+            </thead>
+
+        </table>
+    
+        <h3>TOTAL: R$ 0.00</h3>
+    
+    </aside>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <a href="https://github.com/ocarlosmonteiro">Desenvolvido por Carlos Monteiro</a>
+    </footer>
+</body>
+
+<script src="/src/scripts/script.js"></script>
+
+</html>

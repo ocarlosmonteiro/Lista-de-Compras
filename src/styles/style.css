@@ -1,0 +1,228 @@
+
+body
+{
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--backgound-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* -- MAIN - FORM --*/
+main
+{
+    width: 25dvw;
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2% 0 3% 0;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+h1
+{
+    padding: 0 5%;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+}
+
+form
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+form input
+{
+    outline: double 1px var(--second-color) ;
+    border-radius: 5px;
+    margin: 2% 2% ;
+    padding: .5em;
+    flex-shrink: 2;
+}
+
+form #insert
+{
+    background-color: var(--backgound-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 1.5vh 4.5vh;
+    transition: 750ms;
+    border-radius: 10px;
+    flex-grow: 0;
+    margin: 2% 0%;
+}
+
+form #insert:hover
+{
+    cursor: pointer;
+    background-color: #4fb4ce;
+
+}
+
+
+/* -- ASIDE DA TABELA -- */
+aside
+{
+    width: 70dvw;
+    height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+/*  -- BARRA DE SCROLL -- */
+
+aside::-webkit-scrollbar 
+{
+    width: 8px;
+}
+
+aside::-webkit-scrollbar-thumb 
+{
+    background-color: #ffffff2d;
+    border-radius: 20px;
+}
+
+aside::-webkit-scrollbar-thumb:hover
+{
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+h2
+{
+    margin: 2% 0 1% 0;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+table
+{
+    width: 95%;
+    border-collapse: collapse;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+thead,
+th,
+tr,
+td
+{
+    height: 5dvh;
+    text-align: start;
+    vertical-align: middle;
+    padding: 0 1%;
+    font-size: 90%;
+}
+
+th, tr
+{
+    border-bottom: 1px solid black;
+}
+
+th:first-of-type,
+td:first-of-type
+{
+    width: 50%;
+}
+
+th:last-of-type,
+td:last-of-type 
+{
+    height: 5dvh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+th:not(:last-of-type),
+td:not(:last-of-type)
+{
+    border-right: 1px solid black;
+}
+
+tr:last-of-type
+{
+    border-bottom: none;
+}
+
+
+
+
+.btn-action
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+#editItem
+{
+    background-image: url(/src/icons/edit.png);
+
+}
+
+#editItem:hover
+{
+    background-color: #0fda0f;
+}
+
+#deleteItem
+{
+    background-image: url(/src/icons/delete.png);
+
+}
+
+#deleteItem:hover
+{
+    background-color: #ec5252;
+}
+
+h3
+{
+    margin: 3% 0 0 0;
+}
+
+
+/* -- RODAPÉ -- */
+footer
+{
+    width: 100%;
+    height: 5dvh;
+    margin: 5% 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: #f3f1f1 solid 1px;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--primary-color);
+}
+
+footer a
+{
+    color: #4682B4;
+}
+
+footer a:hover
+{
+    text-decoration: underline;
+    color: var(--backgound-color);
+}

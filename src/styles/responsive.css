@@ -1,0 +1,32 @@
+@media (max-width: 785px) 
+{
+    body
+    {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main
+    {
+        width: 80dvw;
+    }
+
+    /* -- ASIDE DA TABELA -- */
+
+    aside
+    {
+        width: 90dvw;
+    }
+
+    table
+    {
+        width: 100%;
+    }
+
+
+    footer 
+    {
+        position: relative;
+    }
+}
