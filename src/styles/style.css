@@ -24,12 +24,9 @@ main
     border-radius: 5px;
 }
 
-h1
+img
 {
-    padding: 0 5%;
-    text-transform: uppercase;
-    font-size: 28px;
-    text-align: center;
+    max-width: 50%;
 }
 
 form
@@ -37,16 +34,17 @@ form
     width: 90%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 form input
 {
+    width: 90%;
+    height: 10%;
     outline: double 1px var(--second-color) ;
     border-radius: 5px;
-    margin: 2% 2% ;
+    margin: 2% 2%;
     padding: .5em;
-    flex-shrink: 2;
 }
 
 form #insert
@@ -175,7 +173,7 @@ tr:last-of-type
 
 #editItem
 {
-    background-image: url(src/icons/edit.png);
+    background-image: url(/src/icons/edit.png);
 
 }
 
@@ -186,7 +184,7 @@ tr:last-of-type
 
 #deleteItem
 {
-    background-image: url(src/icons/delete.png);
+    background-image: url(/src/icons/delete.png);
 
 }
 
