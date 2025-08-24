@@ -57,13 +57,14 @@ form #insert
     border-radius: 10px;
     flex-grow: 0;
     margin: 2% 0%;
+    transition: 1s;
 }
 
 form #insert:hover
 {
     cursor: pointer;
     background-color: #4fb4ce;
-
+    transform: scale(1.05);
 }
 
 
@@ -158,39 +159,25 @@ tr:last-of-type
     border-bottom: none;
 }
 
-
-
-
 .btn-action
 {
     width: 20px;
     height: 20px;
     border-radius: 5%;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
 }
 
-#editItem
-{
-    background-image: url(/src/icons/edit.png);
-
-}
-
 #editItem:hover
 {
-    background-color: #0fda0f;
-}
-
-#deleteItem
-{
-    background-image: url(/src/icons/delete.png);
-
+    transform: scale(1.3);
 }
 
 #deleteItem:hover
 {
-    background-color: #ec5252;
+    transform: scale(1.3);
 }
 
 h3

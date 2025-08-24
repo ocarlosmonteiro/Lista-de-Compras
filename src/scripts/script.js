@@ -17,40 +17,56 @@ form.addEventListener('submit', (e) => {
     listProduct.push(product);
 
     console.log(listProduct);
-    incrementTable(product);
+    updateTable();
 
     form.reset();
     
 });
 
-function incrementTable(product)
+function updateTable()
 {
-    const row = document.createElement("tr");
+    tBody.innerHTML = '';
 
-    row.innerHTML = `
-        <td>${product.name}</td>
-        <td>${product.price.toFixed(2)}</td>
-        <td>${product.quantity}</td>
-        <td>${product.total.toFixed(2)}</td>
+    listProduct.forEach((item, index) => {
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td>${item.total.toFixed(2) }</td>
         <td>
-           <button class="btn-action" id="editItem" title="Editar" onclick="editItem()"></button>
-            <button class="btn-action" id="deleteItem" title="Apagar" onclick="removeItem()"></button>
+            <button class="btn-action" id="editItem" title="Editar" onclick="editItem(${index})">✏️</button>
+            <button class="btn-action" id="deleteItem" title="Apagar" onclick="removeItem(${index})">🗑️</button>
         </td>
-    `;
+        `;
 
-    tBody.appendChild(row);
+        tBody.appendChild(row);
+    });
 
+    updateTotal();
 }
 
-function editItem()
+function updateTotal() 
 {
-    console.log("teste")
+    const total = listProduct.reduce((acc, item) => acc + item.total, 0);
+    totalText.textContent = `Total: R$ ${total.toFixed(2)}`;
 }
 
-function removeItem()
+function editItem(index)
 {
-    console.log("Teste 2")
+    const product = listProduct[index];
+
+    document.getElementById("name").value = product.name;
+    document.getElementById("price").value = product.price;
+    document.getElementById("quantity").value = product.quantity;
+
+    listProduct.splice(index, 1);
+    updateTable();
 }
 
-
-//totalText.textContent = `Total Geral: R$ ${}`
+function removeItem(index) 
+{
+    listProduct.splice(index, 1);
+    updateTable();
+}
